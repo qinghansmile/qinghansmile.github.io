@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>chapter 3 传输层 | 轻寒の博客</title><meta name="keywords" content="计算机网络"><meta name="author" content="乍暖轻寒smile"><meta name="copyright" content="乍暖轻寒smile"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="传输层 传输层的基本功能：在运行不同主机上应用进程之间提供逻辑通信 网络层: 主机间的逻辑通信（主机-主机）点-点 传输层: 进程间的逻辑通信（进程-进程）端-端（越到上层越细） 进程 (process)：在主机上运行的程序。 进程通信： 同一主机中两个进程间的通信：由操作系统控制； 不同主机中进程间的通信：通过网络交换报文进行。 发送进程：产生报文，并向网络发送； 接收进程：接收报文，并回送报文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="chapter 3 传输层">
+<meta property="og:url" content="https://qinghansmile.github.io/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%203%20%E4%BC%A0%E8%BE%93%E5%B1%82/index.html">
+<meta property="og:site_name" content="轻寒の博客">
+<meta property="og:description" content="传输层 传输层的基本功能：在运行不同主机上应用进程之间提供逻辑通信 网络层: 主机间的逻辑通信（主机-主机）点-点 传输层: 进程间的逻辑通信（进程-进程）端-端（越到上层越细） 进程 (process)：在主机上运行的程序。 进程通信： 同一主机中两个进程间的通信：由操作系统控制； 不同主机中进程间的通信：通过网络交换报文进行。 发送进程：产生报文，并向网络发送； 接收进程：接收报文，并回送报文">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg">
+<meta property="article:published_time" content="2021-06-15T01:30:00.000Z">
+<meta property="article:modified_time" content="2022-04-19T16:40:35.504Z">
+<meta property="article:author" content="乍暖轻寒smile">
+<meta property="article:tag" content="计算机网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://qinghansmile.github.io/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%203%20%E4%BC%A0%E8%BE%93%E5%B1%82/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":5000,"languages":{"author":"作者: 乍暖轻寒smile","link":"链接: ","source":"来源: 轻寒の博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'chapter 3 传输层',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-20 00:40:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><meta name="generator" content="Hexo 5.4.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E5%A4%B4%E5%83%8F1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home -找文章 /"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive -链接 /links/"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-users"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">轻寒の博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home -找文章 /"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive -链接 /links/"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-users"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">chapter 3 传输层</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-06-15T01:30:00.000Z" title="发表于 2021-06-15 09:30:00">2021-06-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-19T16:40:35.504Z" title="更新于 2022-04-20 00:40:35">2022-04-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="chapter 3 传输层"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>传输层</h1>
+<p>传输层的基本功能：在运行不同主机上<strong>应用进程</strong>之间提供<strong>逻辑通信</strong></p>
+<p>网络层: 主机间的逻辑通信（主机-主机）点-点</p>
+<p>传输层: 进程间的逻辑通信（进程-进程）端-端（越到上层越细）</p>
+<p>进程 (process)：在主机上运行的程序。</p>
+<p>进程通信：</p>
+<p>同一主机中两个进程间的通信：由<strong>操作系统</strong>控制；</p>
+<p>不同主机中进程间的通信：通过网络交换<strong>报文</strong>进行。</p>
+<p>发送进程：产生报文，并向网络发送；</p>
+<p>接收进程：接收报文，并回送报文。</p>
+<p><strong>套接字：同一台主机内应用层与传输层之间的接口</strong>。也叫应用程序和网络之间的应用程序接口API ,是在网络上建立网络应用程序的<strong>可编程接口</strong>。</p>
+<p><strong>主机名称或地址：网络中的哪一个主机</strong>，用<strong>IP地址</strong>标识（32位，全球惟一）。<strong>网络层</strong></p>
+<p>进程的标识：主机中的哪一个进程。因特网中，采用端口号标识(port number)。<strong>传输层</strong></p>
+<p>根据网络应用的实际需求，决定选择传输协议：<strong>TCP</strong>、<strong>UDP</strong></p>
+<p>TCP协议提供的服务：功能完善、面向连接、可靠传输服务</p>
+<p>支持可靠的面向连接服务</p>
+<p>支持字节流传输服务</p>
+<p>支持全双工服务</p>
+<p>支持建立多个并发的TCP连接（服务器同时响应多个连接）</p>
+<p>支持可靠传输服务（确认机制，拥塞控制）</p>
+<p>TCP连接建立</p>
+<p>步骤 1: 客户机向服务器发送 TCP SYN报文段</p>
+<p>指定初始序号</p>
+<p>没有数据</p>
+<p>步骤 2: 服务器收到SYN报文段, 用SYN-ACK报文段回复</p>
+<p>服务器为该连接分配缓冲区和变量</p>
+<p>指定服务器初始序号</p>
+<p>步骤 3: 客户机接收到 SYNACK, 用ACK报文段回复,可能包含数据</p>
+<p><img src="C:/Users/%E4%B9%8D%E6%9A%96%E8%BD%BB%E5%AF%92/AppData/Roaming/Typora/typora-user-images/image-20220420003303406.png" alt=""></p>
+<p>TCP连接释放</p>
+<p>​	步骤 1: 客户机向服务器发送TCP FIN控制报文段</p>
+<p>​	步骤 2: 服务器收到FIN，用ACK回答。关闭连接，发送FIN</p>
+<p>​	步骤 3: 客户机收到FIN, 用ACK回答，进入超时等待，将对接收到的FIN进行确认</p>
+<p>​	步骤 4: 服务器接收ACK，连接关闭</p>
+<p><img src="C:/Users/%E4%B9%8D%E6%9A%96%E8%BD%BB%E5%AF%92/AppData/Roaming/Typora/typora-user-images/image-20220420003345989.png" alt=""></p>
+<p>TCP的4个定时器：</p>
+<p><strong>重传</strong>定时器：retransmission timer，对报文<strong>确认</strong>的等待时间</p>
+<p><strong>持续</strong>定时器：persistent timer，对响应的等待时间</p>
+<p><strong>保持</strong>定时器：keep live timer，防止<strong>接收端故障</strong></p>
+<p><strong>时间等待</strong>定时器：time wait timer，防止非正常释放连接</p>
+<p>TCP滑动窗口与确认重传机制</p>
+<p>回退方式 go back N：不管之后的报文段是否已正确接收，从该报文段的第1个字节序号开始，重发所有的报文段</p>
+<p>TCP窗口与流量控制</p>
+<p>流量控制过程</p>
+<p>接收方从缓存中读取速度大于等于字节到达速度，接收方在每个确认中发出</p>
+<p>一个非零窗口通告。</p>
+<p>如果发送方发送速度比接收方读取速度快，将造成缓冲区被全部占用，之后</p>
+<p>到达的字节因缓冲区溢出而丢弃。此时，接收方必须发出一个“零窗口”的</p>
+<p>通告。告知当发送方停止发送（直到接收“非零窗口”通告为止）。</p>
+<p>接收方需要接收能力给出一个合适的接收窗口，并将它写入TCP报头中，通</p>
+<p>知发送方。</p>
+<p>提高传输效率Nagle算法：当数据以每次1B的方式进入发送方时，第1次发送方只发送1B，其他的字节存入缓冲区。当第1个报文段被确认，再把缓冲区中数据放入第2个报文段中发送，这样一边等待确认，一边缓存待发送数据（可有效提高传输效率）。当缓存的数据字节数达到发送窗口的1/2（接近MSS），立即将它们作为一个报文段发送。</p>
+<p><img src="C:/Users/%E4%B9%8D%E6%9A%96%E8%BD%BB%E5%AF%92/AppData/Roaming/Typora/typora-user-images/image-20220420003537039.png" alt=""></p>
+<p>重点：<strong>ACK</strong>、<strong>syn</strong>、<strong>seq</strong>的计算！！！</p>
+<p>实现拥塞控制最基本手段：TCP滑动窗口技术。</p>
+<p>发送数据，既要考虑接收能力，又要避免网络发生拥塞</p>
+<p>发送窗口计算：发送窗口 = Min（通知窗口，拥塞窗口 ）</p>
+<p>通知窗口rwnd：接收方允许接收的能力，来自接收方流量控制（将“通知窗口”</p>
+<p>值放在TCP报头中，传送给发送端）。</p>
+<p><strong>拥塞窗口cwnd</strong>：发送方根据网络拥塞情况得出的窗口值，来自发送方的流量控制。</p>
+<p>未发生拥塞情况下，接收方“通知窗口”和“拥塞窗口”是一致的</p>
+<p><img src="C:/Users/%E4%B9%8D%E6%9A%96%E8%BD%BB%E5%AF%92/AppData/Roaming/Typora/typora-user-images/image-20220420003731893.png" alt=""></p>
+<p>拥塞控制方法：</p>
+<p>慢开始慢开始阈值SST（slow start threshold）：避免拥塞窗口增长过快引起网络拥塞。慢开始阶段，若出现超时，发送方将SST值设置为cwnd/2</p>
+<p>拥塞避免：当cwnd&gt;SST时，停止使用慢开始算法，转而使用拥塞避免算法，每增加一个往返就将cwnd值+1，拥塞窗口呈线性增加规律缓慢增长</p>
+<p>快重传：接收方应及时向发送方连续3次发出对M2的“重复确认”，要求尽早重传未被确认的报文</p>
+<p>快恢复</p>
+<p><img src="C:/Users/%E4%B9%8D%E6%9A%96%E8%BD%BB%E5%AF%92/AppData/Roaming/Typora/typora-user-images/image-20220420003755812.png" alt=""></p>
+<p><img src="C:/Users/%E4%B9%8D%E6%9A%96%E8%BD%BB%E5%AF%92/AppData/Roaming/Typora/typora-user-images/image-20220420003817654.png" alt=""></p>
+<p>UDP协议提供的服务：简单、高效传输服务</p>
+<p>无连接、不可靠的传输</p>
+<p>无提供拥塞控制机制</p>
+<p>不提供最小延时保证</p>
+<p>无连接、不可靠的传输协议。</p>
+<p>面向报文的传输层协议（保留原报文）只有<strong>校验</strong>和<strong>保证数据传输的可靠性</strong>！</p>
+<p><img src="C:/Users/%E4%B9%8D%E6%9A%96%E8%BD%BB%E5%AF%92/AppData/Roaming/Typora/typora-user-images/image-20220420003913723.png" alt=""><img src="C:/Users/%E4%B9%8D%E6%9A%96%E8%BD%BB%E5%AF%92/AppData/Roaming/Typora/typora-user-images/image-20220420003936121.png" alt=""></p>
+<p><img src="C:/Users/%E4%B9%8D%E6%9A%96%E8%BD%BB%E5%AF%92/AppData/Roaming/Typora/typora-user-images/image-20220420004002290.png" alt=""></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">乍暖轻寒smile</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://qinghansmile.github.io/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%203%20%E4%BC%A0%E8%BE%93%E5%B1%82/">https://qinghansmile.github.io/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%203%20%E4%BC%A0%E8%BE%93%E5%B1%82/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://qinghansmile.github.io" target="_blank">轻寒の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></div><div class="post_share"><div class="social-share" data-image="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%202%20%E5%BA%94%E7%94%A8%E5%B1%82/"><img class="prev-cover" src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">chapter 2 应用层</div></div></a></div><div class="next-post pull-right"><a href="/2021/06/10/%E9%AB%98%E7%AD%89%E5%88%86%E6%9E%90%E5%8C%96%E5%AD%A6/%E4%BA%8C%E6%AC%A1%E7%A6%BB%E5%AD%90%E8%B4%A8%E8%B0%B1%E4%BB%AA(SIMS)/"><img class="next-cover" src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">二次离子质谱仪(SIMS)</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA/" title="chapter 1 概论"><img class="cover" src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-15</div><div class="title">chapter 1 概论</div></div></a></div><div><a href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(3)/" title="chapter 1 概论"><img class="cover" src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-15</div><div class="title">chapter 1 概论</div></div></a></div><div><a href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(4)/" title="chapter 1 概论"><img class="cover" src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-15</div><div class="title">chapter 1 概论</div></div></a></div><div><a href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(5)/" title="chapter 1 概论"><img class="cover" src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-15</div><div class="title">chapter 1 概论</div></div></a></div><div><a href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%202%20%E5%BA%94%E7%94%A8%E5%B1%82/" title="chapter 2 应用层"><img class="cover" src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-15</div><div class="title">chapter 2 应用层</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NDcyNy8zMTE5OA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/%E5%A4%B4%E5%83%8F1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">乍暖轻寒smile</div><div class="author-info__description">玻璃晴朗，橘子辉煌</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/qinghansmile" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://qinghansmile.github.io/" target="_blank" title="博客"><i class="fas fa-bed"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎来到轻寒的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">传输层</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/12/06/%E6%9D%82%E8%AE%B0/2021.12.06/" title="2021.12.06"><img src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2021.12.06"/></a><div class="content"><a class="title" href="/2021/12/06/%E6%9D%82%E8%AE%B0/2021.12.06/" title="2021.12.06">2021.12.06</a><time datetime="2021-12-06T08:30:00.000Z" title="发表于 2021-12-06 16:30:00">2021-12-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/28/%E6%9D%82%E8%AE%B0/2021.10.28/" title="2021.10.28"><img src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2021.10.28"/></a><div class="content"><a class="title" href="/2021/10/28/%E6%9D%82%E8%AE%B0/2021.10.28/" title="2021.10.28">2021.10.28</a><time datetime="2021-10-28T01:30:00.000Z" title="发表于 2021-10-28 09:30:00">2021-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/20/%E6%9D%82%E8%AE%B0/2021.10.20/" title="2021.10.20"><img src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2021.10.20"/></a><div class="content"><a class="title" href="/2021/10/20/%E6%9D%82%E8%AE%B0/2021.10.20/" title="2021.10.20">2021.10.20</a><time datetime="2021-10-20T01:30:00.000Z" title="发表于 2021-10-20 09:30:00">2021-10-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA/" title="chapter 1 概论"><img src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="chapter 1 概论"/></a><div class="content"><a class="title" href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA/" title="chapter 1 概论">chapter 1 概论</a><time datetime="2021-06-15T01:30:00.000Z" title="发表于 2021-06-15 09:30:00">2021-06-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(3)/" title="chapter 1 概论"><img src="https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="chapter 1 概论"/></a><div class="content"><a class="title" href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(3)/" title="chapter 1 概论">chapter 1 概论</a><time datetime="2021-06-15T01:30:00.000Z" title="发表于 2021-06-15 09:30:00">2021-06-15</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://pica.zhimg.com/v2-37134f732bbe21779fdb2fc8dca410c7_r.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 乍暖轻寒smile</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">欢迎来到我的个人空间😂</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="7385965145" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (true) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
