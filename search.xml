@@ -61,6 +61,234 @@
     
     
     <entry>
+      <title>二次离子质谱仪(SIMS)</title>
+      <link href="/2021/06/10/%E4%BA%8C%E6%AC%A1%E7%A6%BB%E5%AD%90%E8%B4%A8%E8%B0%B1%E4%BB%AA(SIMS)/"/>
+      <url>/2021/06/10/%E4%BA%8C%E6%AC%A1%E7%A6%BB%E5%AD%90%E8%B4%A8%E8%B0%B1%E4%BB%AA(SIMS)/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>二次离子质谱仪(SIMS)</h1><p>SIMS: 表面分析与得到分子表面官能基活性的影像 :</p><p>意即SIMS仪器拥有表面分析仪基本的分析功能</p><p>二次离子质谱法</p><p>二次离子质谱法是指当初级离子束(Ar+，O2+，N2+, O-， F-，N -或Cs+等) 轰击固体试样表面时，它可以从表面溅射出各种类型的二次离子，利用离子在电场，磁场或自由空 间中的运动规律，通过质量分析器，可以使不同质荷比的 离子分开，经分别计数后可得到二次离子强度-质荷比关系曲线的分析方法</p><p>二次离子：指离子束轰击表面，从表面溅射的新产生的离子</p><p>具有以下优点：</p><ol><li>可以实现对元素周期表中几乎所有元素的分析；</li><li>可以检测不易挥发和热稳定性差的化合物；</li><li>可以实现对被分析物表面的逐层纵向剖析；</li><li>在超高真空条件下对化合物进行分析，确保化合物表面成分分析结果的真实性；</li><li>可以实现对同位素的分析；</li><li>具有超高的检测灵敏度。</li></ol><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419143319407.png" alt="image-20220419143319407"><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419143336527.png" alt="image-20220419143336527" style="zoom: 67%;" /></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>开尔文探针力显微镜（KPFM）</title>
+      <link href="/2021/06/10/%E5%BC%80%E5%B0%94%E6%96%87%E6%8E%A2%E9%92%88%E5%8A%9B%E6%98%BE%E5%BE%AE%E9%95%9C%EF%BC%88KPFM%EF%BC%89/"/>
+      <url>/2021/06/10/%E5%BC%80%E5%B0%94%E6%96%87%E6%8E%A2%E9%92%88%E5%8A%9B%E6%98%BE%E5%BE%AE%E9%95%9C%EF%BC%88KPFM%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>开尔文探针力显微镜（KPFM）</h1><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419143514006.png" alt="image-20220419143514006"></p><p>KPFM使用AFM的性质得到高度，由电容的性质可知，C=介电常数<em>介电常数</em>A/d  C=q/deltaV , 所以就可以得到材料的带电量q（探针针尖的面积，介电常数和材料的介电常数已知）得到带电量q之后可以得到电压进一步得到功函数</p><p>开尔文探针力显微镜（Kelvin probe microscopy，KPFM） 可提供有关样品表面的接触电势或功函数的信息，从而提供与样品电学特性相关的对比机制。功函数在固态物理学中被定义为把一个电子从固体费米能级移到真空中所需的能量；功函数因而是表面的属性，而不是整体的属性。因此，KPFM是仅探测表面和近表面的表面敏感方法。</p><p>开尔文探针力显微在振幅调制模式下运行，这是一种动态力模式，其中具有薄导电涂层的悬臂以其共振频率被驱动（该模式也称为轻敲模式）</p><p>扫描导电悬臂在表面上以恒定高度扫描，以绘制表面的功函数</p><p>开尔文探针力显微镜在获得样品表面形貌的基础上可同时得到表面功函数或表面势。开尔文探针力显微镜和静电力显微镜的主要差异在于开尔文探针力显微镜在探针或样品上施加补偿电压，通过专用反馈控制电路实时调整该补偿电压使得探针和样品之间的静电力为零，从而定量测得样品表面的局域电势。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MALDI-TOF</title>
+      <link href="/2021/06/09/MALDI-TOF/"/>
+      <url>/2021/06/09/MALDI-TOF/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>基质辅助激光解吸离子化技术(Matrix assisted laser desorption/ionization，MALDI)</h1><p>基质辅助激光解吸离子化技术(Matrix assisted laser desorption/ionization，MALDI), 是一种用于质谱的软的离子化的技术，可以得到用常 规离子化方法容易解离而得到分子碎片的一些大分子的质谱信息，比如生物分子类的DNA，生物高分子、蛋白质、多肽 和糖，以及其他大分子量的有机分子，如高分子、树状分子 和其他大分子，在这方面类似于同样是软离子化方法的电喷 雾离子法，不过MALDI更容易得单电荷的离子峰。</p><p>在一个微小的区域内，在极短的时间间隔 ( ns数量级 )中， 激光对靶上待分析物质提供高强度脉冲式能量，使其在瞬间完成解吸和电离，且不产生热分解</p><h1>飞行时间质谱（Time of Flight Mass Spectrometer， TOF）</h1><p>飞行时间质谱，Time of Flight Mass Spectrometer (TOF)， 是一种很常用的质谱仪。这种质谱仪的质量分析器是一个离子漂移管(ion drift tube)。由离子源产生的离子首先被收集。在收集器中所有离子速度变为0。使用一个脉冲电场加速后进入无场漂移管，并以恒定速度飞向离子接收器，记录各离子的到达时间和丰度。离子质量越大，到达接收器所用时间越长，离子质量越小，到达接收器所用时间越短，根据这一原理，可以把不同质量的离子按m/z值大小进行分离。也就是说飞行时间判断m/z。</p><p>TOF仪器里面没磁场分子到达飘移端时动量几乎是0，由脉冲电位驱动在真空系统中飘移，离子质量越大，到达接收器所用时间越长，离子质量越小，到达侦测器所用时间越短，根据这一原理，可以把不同质量的离子按m/z值大小进行分离。</p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419143038316.png" alt="image-20220419143038316"></p><p>MALDI是 “基质辅助激光解吸电离” 的缩写。MALDI的样品均匀地混合在大量的基质中，基质吸收紫外光并将其转化为热能。基质的一小部分迅速凝聚，并与样品一起蒸发。</p><p>TOF（Time of Flight）的独特之处在于其离子飞行时间只依赖于他们的质量。由于其一次脉冲就可得到一个全谱，离子利用率最高，能最好地实现对样品几乎无损的静态分析，而其更重要的特点是只要降低脉冲的重复频率就可扩展质量范围，从原理上不受限制</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>热力学&amp;平衡&amp;Ecell</title>
+      <link href="/2021/06/09/%E7%83%AD%E5%8A%9B%E5%AD%A6&amp;%E5%B9%B3%E8%A1%A1&amp;Ecell/"/>
+      <url>/2021/06/09/%E7%83%AD%E5%8A%9B%E5%AD%A6&amp;%E5%B9%B3%E8%A1%A1&amp;Ecell/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>热力学&amp;平衡&amp;Ecell</h1><p><img src="C:%5CUsers%5C%E4%B9%8D%E6%9A%96%E8%BD%BB%E5%AF%92%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220419142716143.png" alt="image-20220419142716143"></p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419142745223.png" alt="image-20220419142745223"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>方波伏安法（OSWV）</title>
+      <link href="/2021/06/08/%E6%96%B9%E6%B3%A2%E4%BC%8F%E5%AE%89%E6%B3%95%EF%BC%88OSWV%EF%BC%89/"/>
+      <url>/2021/06/08/%E6%96%B9%E6%B3%A2%E4%BC%8F%E5%AE%89%E6%B3%95%EF%BC%88OSWV%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>方波伏安法（OSWV）</h1><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419141945303.png" alt="image-20220419141945303" style="zoom:67%;" /><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419141957368.png" alt="image-20220419141957368" style="zoom: 67%;" /></p><p>结合了CV和DPV，即消除了背景电流的干扰，提高了信噪比，又提高了检测时间</p><p>阶梯电压使在一段时间内有一个稳定的电位。</p><p>脉冲使氧化和还原信号相加（实为减）减少背景电流的干扰，放大信号，提高了信噪比和灵敏度</p><p>LOD，灵敏度增强</p><p>通常低至1 nm</p><p>峰形</p><p>易于识别信号</p><p>避免充电电流的干扰</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>极谱法</title>
+      <link href="/2021/06/08/%E6%9E%81%E8%B0%B1%E6%B3%95/"/>
+      <url>/2021/06/08/%E6%9E%81%E8%B0%B1%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>极谱法</h1><p>极谱分析法简称极谱法。在作阴极的滴汞电极上产生浓差极化的情况下，通过测定电解过程中所得的电流 -电压曲线，来确定溶液中的待测组分及其浓度的电化学分析法。它与伏安法的区别在于极化电极的不同。</p><p>前者使用滴汞电极或其他表面能够周期性更新的液体 电极；后者使用表面静止的液体或固体电极如微钻电极个表面积很小，充分极化的滴汞电极作工作电极， 另一个是完全不极化的参比电极（例如饱和甘汞电极）。</p><p>将其浸入被测溶液中，在逐渐增大外加电压的条件下进行电解。常用于微量分析和超微量分析。近年来各类新型极谱法不断出现，且有自动化和电子计算机化的极谱仪，该法已成为一种重要的近代电化学分析法。</p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419142351720.png" alt="image-20220419142351720"></p><p>电化学中的法拉第电流指的是在电极上进行氧化还原反应形成的电流。（剩余电流的一种）</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>STM&amp;STS</title>
+      <link href="/2021/06/07/STM&amp;STS/"/>
+      <url>/2021/06/07/STM&amp;STS/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419141106727.png" alt="image-20220419141106727"></p><p>态密度（DOS）:“宏观态出现的概率密度”，而宏观态在大多数情况下指的是能量。某个能量下的微观态数越多，态密度就越大。<br>HOMO指的是最高占据分子轨道，LUMO指的是最低未占据分子轨道，上图中2和4都可以看到影像，因为2中探针能量刚好处于价带的最高能级，4中刚好处于导带的最低能级，而3中处于带隙（band gap）中，其中并没有态。<br>该仪器检测分子的LUMO和HOMO，由于存在电势差所以会产生电流，通过改变探针的电压来改变探针表面的费米能级，让电流通过分子的HOMO或者LUMO，会得到信号</p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419141255337.png" alt="image-20220419141255337"></p><p>固定探测点，改变偏压，即dI/dV(V)，探测到的是局域电子态密度LDOS随能量的变化。</p><p>固定偏压，改变探测点，又称dI/dV mapping，即dI/dV®，局域电子态密度LDOS随空间的变化。</p><p>下图中，I-V曲线描绘了导带，价带，带隙的特点，中间为零的为带隙，右边负值为价带，左边为导带</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>STM&amp;STS&amp;DNA sequencing</title>
+      <link href="/2021/06/06/STM&amp;STS&amp;DNA-sequencing/"/>
+      <url>/2021/06/06/STM&amp;STS&amp;DNA-sequencing/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>隧穿效应（tunneling effect）</h1><p>在古典力 学中，一个处于位能较低的粒子是不可能跃过能量障 碍到达另一边的，除非粒子的动能超过此能阶障碍。<br>但以量子物理的观点来看，却有此可能性。所谓的 「穿隧效应」就是指粒子可穿过比本身总能高的能量障碍。<br>STM的工作原理即是利用量子力学的穿隧效应，当探针和待测物质导体表面非常接近时，探针与样品基材间的偏压(bias)将产生一道穿隧电流，此电流可由下列式子来表示：<br>I_t=CE_bias e^(−βd)<br>I_t：穿隧电流<br>C：穿隧相关的常数<br>E_bias： 施加于探针相对于样品的偏压值<br>β：穿隧衰减常数(tunneling decay constant)<br>d：探针至样品的距离。</p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419140805041.png" alt="image-20220419140805041"></p><h1>DNA sequencing</h1><h1>DNA测序(使STM尖端功能化)</h1><p>优点：</p><ol><li><p>配对的碱基对间有氢键,增加STM隧道电子的传递路径</p></li><li><p>配对的碱基对间电子可能coupling,增加STM隧道电子的传递路径</p></li><li><p>其他好处,可以发展real-time in-situ的观察这些DNA结构的老化机制等<br>缺点：<br>一次只能修饰一种</p></li></ol><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419140838963.png" alt="image-20220419140838963"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>TERS&amp;SERS</title>
+      <link href="/2021/06/05/TERS&amp;SERS/"/>
+      <url>/2021/06/05/TERS&amp;SERS/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>拉曼光谱：光照射到物质，使光子与分子内的电子碰撞，若发生的是非弹性碰撞时，光子就有一部分能量传递给电子，此时散射光的频率就不等于入射光的频率，这种散射被称为拉曼散射，所产生的光谱被称为拉曼光谱。（简言之，拉曼光谱的产生是由于单色光照射后产生光的综合散射效应，引起分子中极化率改变的振动）</p><p>增强机制<br>以下两种效应可使紧靠金属的分子的拉曼散射增强：<br>• 金属能够放大入射激光和出射的拉曼散射光的电场<br>• 金属能够改变被吸附分子里的电荷分布，产生更强的散射</p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419140503026.png" alt="image-20220419140503026"></p><p>表面增强拉曼散射（Surface-Enhanced Raman Scattering，SERS）</p><p>用通常的拉曼光谱法测定吸附在胶质金属颗粒如银、金或铜表面的样品，或吸附在这些金属片的粗糙表面上的样品。尽管原因尚不明朗，人们发现被吸附的样品其<a href="https://baike.baidu.com/item/%E6%8B%89%E6%9B%BC%E5%85%89%E8%B0%B1/2641897">拉曼光谱</a>的强度可提高10^3-10^6倍。主要用于吸附物种的状态解析等（直径变化）</p><p>尖端增强拉曼散射（Tip-Enhanced Raman Scattering，TERS）</p><p>AFM+拉曼：AFM与共焦光学显微镜集成，横向分辨率3~5 nm</p><p>探针选择性施加压力,使小部分的地方键长改变,更容易振动，因此拉曼位移的位置改变,只有被挤压的分子才有拉曼图像响应,因此拉曼讯号增强,且分辨率大幅度提高.</p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419140601800.png" alt="image-20220419140601800"></p><p>Q:可否用STM tip?优缺点?为何一般TERS指的是AFM-Raman?</p><p>A: 不能使用STM tip，因为STM tip 会施加偏压，使表面分子在某一方向上极化（二者操作方式不同）；因为没有电压施加</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CCD(charge-coupled devices 电耦合侦测器)</title>
+      <link href="/2021/06/04/CCD(charge-coupled-devices-%E7%94%B5%E8%80%A6%E5%90%88%E4%BE%A6%E6%B5%8B%E5%99%A8)/"/>
+      <url>/2021/06/04/CCD(charge-coupled-devices-%E7%94%B5%E8%80%A6%E5%90%88%E4%BE%A6%E6%B5%8B%E5%99%A8)/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>CCD (charge-coupled devices)</h1><h1>电耦合侦测器: 电荷的产生,储存,传递与侦测</h1><p>是一种半导体侦测器, 由512x320 pixels组成</p><p>P type Si 电容(偏正),可以将电子收集在其位能井内,电子由N type移至基质</p><p>每个pixel (像素) 由三个电极组成,称一个单元 由一个三相计时电路(three-phase clock circuit) 一步一步(周期性脉冲电位)将收集到的电子转移到长边侧, 这有一高速轮班登入器</p><p>所有电子先往长边集中,再往短边会合,最后经过讯号放大器读出</p><p>通过电子产生的位置来检测光照射的位置</p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419140202380.png" alt="image-20220419140202380"><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419140215393.png" alt="image-20220419140215393"></p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419140231657.png" alt="image-20220419140231657"><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419140248638.png" alt="image-20220419140248638"></p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419140305583.png" alt="image-20220419140305583"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>荧光共振能量转移（FRET）</title>
+      <link href="/2021/06/03/%E8%8D%A7%E5%85%89%E5%85%B1%E6%8C%AF%E8%83%BD%E9%87%8F%E8%BD%AC%E7%A7%BB%EF%BC%88FRET%EF%BC%89/"/>
+      <url>/2021/06/03/%E8%8D%A7%E5%85%89%E5%85%B1%E6%8C%AF%E8%83%BD%E9%87%8F%E8%BD%AC%E7%A7%BB%EF%BC%88FRET%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>指两个荧光发色基团在足够靠近时（小于100埃）， 当供体分子（donnor）吸收一定频率的光子后 被激发到更高的电子能态，在该电子回到基态前，通过偶极子相互作用，实现了能量向邻近的受体分子（acceptor）转移</p><p>该放光没放光,被旁边吸收, 放出旁边物质的光</p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419135905631.png" alt="image-20220419135905631"></p><p>此过程为非辐射的，因为没有光子的参与</p><p>发生有效能量转移的条件是苛刻的：</p><p>（1）Donor和Acceptor的吸收光谱一定是重叠的</p><p>（2）二者的荧光色团必须以适当方式排列，方向一致比如C中的第一幅图不可以发生FRET</p><p>（3）必须足够接近，小于10nm，如b图，这样发生能量转移的几率才会高</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>荧光&amp;香豆素（光致电子转移，PET）</title>
+      <link href="/2021/06/02/%E8%8D%A7%E5%85%89&amp;%E9%A6%99%E8%B1%86%E7%B4%A0%EF%BC%88%E5%85%89%E8%87%B4%E7%94%B5%E5%AD%90%E8%BD%AC%E7%A7%BB%EF%BC%8CPET%EF%BC%89/"/>
+      <url>/2021/06/02/%E8%8D%A7%E5%85%89&amp;%E9%A6%99%E8%B1%86%E7%B4%A0%EF%BC%88%E5%85%89%E8%87%B4%E7%94%B5%E5%AD%90%E8%BD%AC%E7%A7%BB%EF%BC%8CPET%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>荧光与磷光</h1><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419125953991.png" alt="image-20220419125953991"></p><p>荧光（fluorescence)：物质吸收特定波长的光从基态跃迁到激发态，立即回到某一能级而释放出比激发光波长更长（能量更小）的发射光。一些材料在紫外光的照射下，能够发出可见光波长范围内的光，这类材料的应用很广，如核酸染料。</p><p>磷光（phosphorescence）：某些物质能吸收一定波长的激发光，但是其不是立马释放发射光，而是有一定的时间延迟才释放发射光，这种光叫做磷光，如夜明珠。</p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419130420250.png" alt="image-20220419130420250"></p><p>定义：</p><p>在光的诱导下，电子进行分子内或分子间转移的现象。</p><p>当入射光照射探针分子，由于电子从供体转移到激发态荧光团，供体分子不发射或仅发射微弱荧光。当探针与分析物结合后，光诱导的电子转移被阻断，荧光团就会恢复荧光发射。</p><p>PET荧光分子探针中，荧光团与受体单元之间存在着光诱导电子转移，对荧光有非常强的淬灭作用，通常是电子从供体转移到激发态荧光团。因此在未结合客体之前，探针分子不发射荧光，或荧光很弱。一旦受体与客体相结合，光诱导电子转移作用受到抑制，甚至被完全阻断，荧光团就会发射荧光。</p><p>在这个例子中，我认为可以从左边的图看出来电子从供体转移到激发态荧光团（hv的作用下）而荧光作用很弱，而右边的图可以看出加入钾离子这个客体之后，光诱导作用受到抑制，此时电子从供体转移到受体（荧光团内部），发出荧光，此时荧光作用占主导作用</p><p>钾离子的存在使得N原子的能级降低（更加稳定），使得电子跃迁主要发生在左边的两个能级，发出荧光，该过程可以根据产生的荧光强度判断钾离子是否存在</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 高等分析化学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>离子层析法&amp;MEKC</title>
       <link href="/2021/06/01/%E7%A6%BB%E5%AD%90%E5%B1%82%E6%9E%90%E6%B3%95&amp;MEKC/"/>
       <url>/2021/06/01/%E7%A6%BB%E5%AD%90%E5%B1%82%E6%9E%90%E6%B3%95&amp;MEKC/</url>
