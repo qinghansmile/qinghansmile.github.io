@@ -65,7 +65,102 @@
       <link href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA/"/>
       <url>/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA/</url>
       
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>概论</h1><p>简单定义 一些互相连接的、自治的计算机的集合。</p><p>文献定义 计算机网络是用通信设备和线路将分散在不同地点的有独立功能的多个计算机系统互相连接起来，并按照网络协议进行数据通信，实现资源共享的计算机集合。</p><p>多个计算机：为用户提供服务；</p><p>一个通信子网：通信设备和线路；</p><p>一系列协议：保证数据通信。</p><p>网络划分为两大部分：</p><p>​网络边缘（资源子网） 外围部件、主机，网络应用</p><p>​网络核心（通信子网） 路由器，通信链路，网络的网络，保证高效、可靠地数据传输</p><p>通信链路：把端系统连接到一起的物理线路</p><p>分组交换机：连接端系统的中间交换设备，功能：接收、转发分组。从一条（入）通信链路接收分组、并保存，再从另一条（出）通信链路转发出去。</p><p>网络交换技术：</p><p>​电话交换（线路交换）</p><p>​报文交换</p><p>​分组交换（包交换）</p><p>网络协议协议三个要素：语法、语义、同步。</p><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419185328581.png" alt=""></p><p>分层特点：</p><p>​每层功能独立；</p><p>​每两个相邻层之间有一逻辑接口，可交换信息；</p><p>​上一层建立在下一层基础上，上一层可调用下一层的服务，下一层为上一层提供服务。</p><p>​发送方：逐层封装；</p><p>​接收方：逐层解封</p><p>​进程通信中的客户(client)/服务器(server)模式(c/s)</p><p>服务器：</p><p>总是打开</p><p>为多个客户机请求提供服务</p><p>永久的IP地址</p><p>可扩展为服务器场（服务器群集）</p><p>客户机：</p><p>​总是打开或间歇打开</p><p>​向服务器发出请求</p><p>​具有动态的IP地址</p><p>​彼此之间不直接通信</p><p>进程通信中的纯P2P（ peer-to-peer ）模式</p><p>​无（最少）打开的服务器</p><p>​任意端系统（对等方）可以直接通信</p><p>​对等方间歇地连接，IP地址不固定</p><p>​例：文件分发、因特网电话等。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>chapter 1 概论</title>
+      <link href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(2)/"/>
+      <url>/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(2)/</url>
+      
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li><h1>概论</h1></li><li><p>简单定义 一些互相连接的、自治的计算机的集合。</p></li><li><p>文献定义 计算机网络是用通信设备和线路将分散在不同地点的有独立功能的多个计算机系统互相连接起来，并按照网络协议进行数据通信，实现资源共享的计算机集合。</p></li><li><p>多个计算机：为用户提供服务；</p></li><li><p>一个通信子网：通信设备和线路；</p></li><li><p>一系列协议：保证数据通信。</p></li><li><p>网络划分为两大部分：</p></li><li><ul><li>网络边缘（资源子网） 外围部件、主机，网络应用</li><li>网络核心（通信子网） 路由器，通信链路，网络的网络，保证高效、可靠地数据传输</li></ul></li><li><p>通信链路：把端系统连接到一起的物理线路</p></li><li><p>分组交换机：连接端系统的中间交换设备，功能：接收、转发分组。从一条（入）通信链路接收分组、并保存，再从另一条（出）通信链路转发出去。</p></li><li><p>网络交换技术：</p></li><li><p>电话交换（线路交换）</p></li><li><p>报文交换</p></li><li><p>分组交换（包交换）</p></li><li><p>网络协议协议三个要素：语法、语义、同步。</p></li><li></li><li><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419185328581.png" alt=""></p></li><li><p>分层特点：</p></li><li><p>每层功能独立；</p></li><li><p>每两个相邻层之间有一逻辑接口，可交换信息；</p></li><li><p>上一层建立在下一层基础上，上一层可调用下一层的服务，下一层为上一层提供服务。</p></li><li><p>​发送方：逐层封装；</p></li><li><p>​接收方：逐层解封</p></li><li><p>​进程通信中的客户(client)/服务器(server)模式(c/s)</p></li><li><p>服务器：</p></li><li><p>总是打开</p></li><li><p>为多个客户机请求提供服务</p></li><li><p>永久的IP地址</p></li><li><p>可扩展为服务器场（服务器群集）</p></li><li><p>客户机：</p></li><li><p>总是打开或间歇打开</p></li><li><p>向服务器发出请求</p></li><li><p>具有动态的IP地址</p></li><li><p>彼此之间不直接通信</p></li><li></li><li><p>进程通信中的纯P2P（ peer-to-peer ）模式</p></li><li><p>​无（最少）打开的服务器</p></li><li><p>​任意端系统（对等方）可以直接通信</p></li><li><p>​对等方间歇地连接，IP地址不固定</p></li><li><p>​例：文件分发、因特网电话等。</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>chapter 1 概论</title>
+      <link href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(3)/"/>
+      <url>/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(3)/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li><h1>概论</h1></li><li><p>简单定义 一些互相连接的、自治的计算机的集合。</p></li><li><p>文献定义 计算机网络是用通信设备和线路将分散在不同地点的有独立功能的多个计算机系统互相连接起来，并按照网络协议进行数据通信，实现资源共享的计算机集合。</p></li><li><p>多个计算机：为用户提供服务；</p></li><li><p>一个通信子网：通信设备和线路；</p></li><li><p>一系列协议：保证数据通信。</p></li><li><p>网络划分为两大部分：</p></li><li><ul><li>网络边缘（资源子网） 外围部件、主机，网络应用</li><li>网络核心（通信子网） 路由器，通信链路，网络的网络，保证高效、可靠地数据传输</li></ul></li><li><p>通信链路：把端系统连接到一起的物理线路</p></li><li><p>分组交换机：连接端系统的中间交换设备，功能：接收、转发分组。从一条（入）通信链路接收分组、并保存，再从另一条（出）通信链路转发出去。</p></li><li><p>网络交换技术：</p></li><li><p>电话交换（线路交换）</p></li><li><p>报文交换</p></li><li><p>分组交换（包交换）</p></li><li><p>网络协议协议三个要素：语法、语义、同步。</p></li><li></li><li><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419185328581.png" alt=""></p></li><li><p>分层特点：</p></li><li><p>每层功能独立；</p></li><li><p>每两个相邻层之间有一逻辑接口，可交换信息；</p></li><li><p>上一层建立在下一层基础上，上一层可调用下一层的服务，下一层为上一层提供服务。</p></li><li><p>​发送方：逐层封装；</p></li><li><p>​接收方：逐层解封</p></li><li><p>​进程通信中的客户(client)/服务器(server)模式(c/s)</p></li><li><p>服务器：</p></li><li><p>总是打开</p></li><li><p>为多个客户机请求提供服务</p></li><li><p>永久的IP地址</p></li><li><p>可扩展为服务器场（服务器群集）</p></li><li><p>客户机：</p></li><li><p>总是打开或间歇打开</p></li><li><p>向服务器发出请求</p></li><li><p>具有动态的IP地址</p></li><li><p>彼此之间不直接通信</p></li><li></li><li><p>进程通信中的纯P2P（ peer-to-peer ）模式</p></li><li><p>​无（最少）打开的服务器</p></li><li><p>​任意端系统（对等方）可以直接通信</p></li><li><p>​对等方间歇地连接，IP地址不固定</p></li><li><p>​例：文件分发、因特网电话等。</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>chapter 1 概论</title>
+      <link href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(4)/"/>
+      <url>/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(4)/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li><h1>概论</h1></li><li><p>简单定义 一些互相连接的、自治的计算机的集合。</p></li><li><p>文献定义 计算机网络是用通信设备和线路将分散在不同地点的有独立功能的多个计算机系统互相连接起来，并按照网络协议进行数据通信，实现资源共享的计算机集合。</p></li><li><p>多个计算机：为用户提供服务；</p></li><li><p>一个通信子网：通信设备和线路；</p></li><li><p>一系列协议：保证数据通信。</p></li><li><p>网络划分为两大部分：</p></li><li><ul><li>网络边缘（资源子网） 外围部件、主机，网络应用</li><li>网络核心（通信子网） 路由器，通信链路，网络的网络，保证高效、可靠地数据传输</li></ul></li><li><p>通信链路：把端系统连接到一起的物理线路</p></li><li><p>分组交换机：连接端系统的中间交换设备，功能：接收、转发分组。从一条（入）通信链路接收分组、并保存，再从另一条（出）通信链路转发出去。</p></li><li><p>网络交换技术：</p></li><li><p>电话交换（线路交换）</p></li><li><p>报文交换</p></li><li><p>分组交换（包交换）</p></li><li><p>网络协议协议三个要素：语法、语义、同步。</p></li><li></li><li><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419185328581.png" alt=""></p></li><li><p>分层特点：</p></li><li><p>每层功能独立；</p></li><li><p>每两个相邻层之间有一逻辑接口，可交换信息；</p></li><li><p>上一层建立在下一层基础上，上一层可调用下一层的服务，下一层为上一层提供服务。</p></li><li><p>​发送方：逐层封装；</p></li><li><p>​接收方：逐层解封</p></li><li><p>​进程通信中的客户(client)/服务器(server)模式(c/s)</p></li><li><p>服务器：</p></li><li><p>总是打开</p></li><li><p>为多个客户机请求提供服务</p></li><li><p>永久的IP地址</p></li><li><p>可扩展为服务器场（服务器群集）</p></li><li><p>客户机：</p></li><li><p>总是打开或间歇打开</p></li><li><p>向服务器发出请求</p></li><li><p>具有动态的IP地址</p></li><li><p>彼此之间不直接通信</p></li><li></li><li><p>进程通信中的纯P2P（ peer-to-peer ）模式</p></li><li><p>​无（最少）打开的服务器</p></li><li><p>​任意端系统（对等方）可以直接通信</p></li><li><p>​对等方间歇地连接，IP地址不固定</p></li><li><p>​例：文件分发、因特网电话等。</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>chapter 1 概论</title>
+      <link href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(5)/"/>
+      <url>/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%201%20%E6%A6%82%E8%AE%BA%20-%20%E5%89%AF%E6%9C%AC%20(5)/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li><h1>概论</h1></li><li><p>简单定义 一些互相连接的、自治的计算机的集合。</p></li><li><p>文献定义 计算机网络是用通信设备和线路将分散在不同地点的有独立功能的多个计算机系统互相连接起来，并按照网络协议进行数据通信，实现资源共享的计算机集合。</p></li><li><p>多个计算机：为用户提供服务；</p></li><li><p>一个通信子网：通信设备和线路；</p></li><li><p>一系列协议：保证数据通信。</p></li><li><p>网络划分为两大部分：</p></li><li><ul><li>网络边缘（资源子网） 外围部件、主机，网络应用</li><li>网络核心（通信子网） 路由器，通信链路，网络的网络，保证高效、可靠地数据传输</li></ul></li><li><p>通信链路：把端系统连接到一起的物理线路</p></li><li><p>分组交换机：连接端系统的中间交换设备，功能：接收、转发分组。从一条（入）通信链路接收分组、并保存，再从另一条（出）通信链路转发出去。</p></li><li><p>网络交换技术：</p></li><li><p>电话交换（线路交换）</p></li><li><p>报文交换</p></li><li><p>分组交换（包交换）</p></li><li><p>网络协议协议三个要素：语法、语义、同步。</p></li><li></li><li><p><img src="http://qinghansmile.oss-cn-guangzhou.aliyuncs.com/img/image-20220419185328581.png" alt=""></p></li><li><p>分层特点：</p></li><li><p>每层功能独立；</p></li><li><p>每两个相邻层之间有一逻辑接口，可交换信息；</p></li><li><p>上一层建立在下一层基础上，上一层可调用下一层的服务，下一层为上一层提供服务。</p></li><li><p>​发送方：逐层封装；</p></li><li><p>​接收方：逐层解封</p></li><li><p>​进程通信中的客户(client)/服务器(server)模式(c/s)</p></li><li><p>服务器：</p></li><li><p>总是打开</p></li><li><p>为多个客户机请求提供服务</p></li><li><p>永久的IP地址</p></li><li><p>可扩展为服务器场（服务器群集）</p></li><li><p>客户机：</p></li><li><p>总是打开或间歇打开</p></li><li><p>向服务器发出请求</p></li><li><p>具有动态的IP地址</p></li><li><p>彼此之间不直接通信</p></li><li></li><li><p>进程通信中的纯P2P（ peer-to-peer ）模式</p></li><li><p>​无（最少）打开的服务器</p></li><li><p>​任意端系统（对等方）可以直接通信</p></li><li><p>​对等方间歇地连接，IP地址不固定</p></li><li><p>​例：文件分发、因特网电话等。</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>chapter 2 应用层</title>
+      <link href="/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%202%20%E5%BA%94%E7%94%A8%E5%B1%82/"/>
+      <url>/2021/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter%202%20%E5%BA%94%E7%94%A8%E5%B1%82/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>网络应用与<strong>应用层</strong>协议：网络应用：<strong>E-mail</strong>**、**<strong>Web</strong></p><p>支持Web服务的关键技术</p><p>超文本传输协议HTTP：Web服务应用层协议，超文本在浏览器与Web服务器之间的传输协议。默认端口号80</p><p>超文本标记语言HTML：文档中的特殊数据格式，一个文档可以链接到另一个文档。</p><p>统一资源定位符URL：标识Web中的资源，以便于用户查找。</p><p>URL地址组成：</p><p>协议类型、存放对象的服务器主机名和对象的路径及地址。</p>]]></content>
       
       
       
